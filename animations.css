@@ -1,0 +1,127 @@
+/* ALL ANIMATIONS STYLE */
+
+.hidden {
+    opacity: 0;
+}
+
+@keyframes text-clip {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(-10deg);
+    }
+}
+
+
+/* CLIPS ANIMATIONS */
+
+@keyframes clip-horizontal {
+    from {
+        -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    to {
+        -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+}
+
+@keyframes clip-diagonal {
+    0% {
+        -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+        clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    }
+    100% {
+        -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    }
+}
+
+
+/* FADE ANIMATIONS */
+
+@keyframes fadein-up {
+    0% {
+        opacity: 0%;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadein-down {
+    0% {
+        opacity: 0%;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadein-right {
+    0% {
+        opacity: 0%;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadein-left {
+    0% {
+        opacity: 0%;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+
+.text-clip {
+    animation: text-clip 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.horizontal-clip {
+    animation: clip-horizontal 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.diagonal-clip {
+    animation: clip-diagonal 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.fadein-up {
+    animation: fadein-up 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.fadein-down {
+    animation: fadein-down 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.fadein-right {
+    animation: fadein-right 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.fadein-left {
+    animation: fadein-left 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.rotate {
+    animation: rotation 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
