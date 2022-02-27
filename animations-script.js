@@ -14,8 +14,15 @@ function animationInit() {
     var triggeringPercentage = 30;
 
     function init() {
-        elements = document.querySelectorAll('.hidden');
-        windowHeight = window.innerHeight;
+        elements = document.querySelectorAll('[animate]'); // on récupère les éléments qui ont animate comme attribut
+        console.info(elements);
+        elements.forEach(hiddeElements);
+        windowHeight = window.innerHeight; // on récupère la hauteur de la fenêtre 
+    }
+
+    function hiddeElements(element) {
+        element.classList.add('hidden'); // on les cache pour ensuite les faire apparaitre
+        console.info('élément masqué');
     }
 
     function checkPosition() {
